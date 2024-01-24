@@ -1,5 +1,5 @@
 /obj/item/clothing/suit/storage/marine/boomvest
-	name = "tactical explosive vest"
+	name = "tactical explosive vest OLD"
 	desc = "Obviously someone just strapped a bomb to a marine harness and called it tactical. The light has been removed, and its switch used as the detonator.<br><span class='notice'>Control-Click to set a warcry.</span> <span class='warning'>This harness has no light, toggling it will detonate the vest! Riot shields prevent detonation of the tactical explosive vest!!</span>"
 	icon_state = "boom_vest"
 	soft_armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, FIRE = 0, ACID = 0)
@@ -24,8 +24,8 @@
 	SIGNAL_HANDLER
 	TIMER_COOLDOWN_START(src, COOLDOWN_BOMBVEST_SHIELD_DROP, 5 SECONDS)
 
-///Overwrites the parent function for activating a light. Instead it now detonates the bomb.
-/obj/item/clothing/suit/storage/marine/boomvest/attack_self(mob/user)
+///	Checking conditions to explode!
+/obj/item/clothing/suit/storage/marine/boomvest/check_and_cut(mob/user)
 	var/mob/living/carbon/human/activator = user
 	if(issynth(activator) && !CONFIG_GET(flag/allow_synthetic_gun_use))
 		balloon_alert(user, "Can't wear this")
@@ -48,6 +48,7 @@
 		activator.say("[bomb_message]!!")
 	if(!do_after(user, 2 SECONDS, TRUE, src, BUSY_ICON_DANGER, ignore_turf_checks = TRUE))
 		return FALSE
+	
 	var/turf/target = get_turf(loc)
 	if(bomb_message) //Checks for a non null bomb message.
 		message_admins("[activator] has detonated an explosive vest with the warcry \"[bomb_message]\" at [ADMIN_VERBOSEJMP(target)]") //Incase disputes show up about marines killing themselves and others.
@@ -55,15 +56,22 @@
 	else
 		message_admins("[activator] has detonated an explosive vest with no warcry at [ADMIN_VERBOSEJMP(target)]")
 		log_game("[activator] has detonated an explosive vest with no warcry at [AREACOORD(target)]")
-
+	
 	activator.record_tactical_unalive()
 
+	var/mob/living/carbon/human/activator = user
 	for(var/datum/limb/appendage AS in activator.limbs) //Oops we blew all our limbs off
 		if(istype(appendage, /datum/limb/chest) || istype(appendage, /datum/limb/groin) || istype(appendage, /datum/limb/head))
 			continue
 		appendage.droplimb()
-	explosion(target, 2, 2, 6, 7, 5, 5)
-	qdel(src)
+	
+	return TRUE
+
+///Overwrites the parent function for activating a light. Instead it now detonates the bomb.
+/obj/item/clothing/suit/storage/marine/boomvest/attack_self(mob/user)
+	if(!check_and_cut(user))
+		return TRUE
+	return FALSE
 
 /obj/item/clothing/suit/storage/marine/boomvest/attack_hand_alternate(mob/living/user)
 	. = ..()
@@ -86,6 +94,8 @@
 		log_filter("Soft IC (Passed)", new_bomb_message, filter_result)
 	bomb_message = new_bomb_message
 	to_chat(user, span_info("Warcry set to: \"[bomb_message]\"."))
+
+/// DIFFERENT TYPES ///
 
 //admin only
 /obj/item/clothing/suit/storage/marine/boomvest/ob_vest
@@ -111,4 +121,17 @@
 			continue
 		appendage.droplimb()
 	explosion(target, 15, 0, 0, 0, 15, 15)
+	qdel(src)
+
+/obj/item/clothing/suit/storage/marine/boomvest/standard
+	name = "tactical explosive vest"
+	desc = "Obviously someone just strapped a bomb to a marine harness and called it tactical. The light has been removed, and its switch used as the detonator.<br><span class='notice'>Control-Click to set a warcry.</span> <span class='warning'>This harness has no light, toggling it will detonate the vest! Riot shields prevent detonation of the tactical explosive vest!!</span>"
+
+/obj/item/clothing/suit/storage/marine/boomvest/standard/attack_self(mob/user)
+	. = ..()
+	if(.)
+		return FALSE
+
+	var/turf/target = get_turf(loc)
+	explosion(target, 2, 2, 6, 7, 5, 5)
 	qdel(src)
