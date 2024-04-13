@@ -25,14 +25,14 @@
 	TIMER_COOLDOWN_START(src, COOLDOWN_BOMBVEST_SHIELD_DROP, 5 SECONDS)
 
 ///	Checking conditions to explode!
-/obj/item/clothing/suit/storage/marine/boomvest/check_and_cut(mob/user)
+/obj/item/clothing/suit/storage/marine/boomvest/proc/check_and_cut(mob/user)
 	var/mob/living/carbon/human/activator = user
 	if(issynth(activator) && !CONFIG_GET(flag/allow_synthetic_gun_use))
 		balloon_alert(user, "Can't wear this")
-		return TRUE
+		return FALSE
 	if(user.alpha != 255)
 		balloon_alert(user, "Can't, your cloak prevents you")
-		return TRUE
+		return FALSE
 	if(activator.wear_suit != src)
 		balloon_alert(user, "Can only be detonated while worn")
 		return FALSE
@@ -43,7 +43,7 @@
 		balloon_alert(user, "Can't, dropped shield too recently")
 		return FALSE
 	if(LAZYACCESS(user.do_actions, src))
-		return
+		return FALSE
 	if(bomb_message)
 		activator.say("[bomb_message]!!")
 	if(!do_after(user, 2 SECONDS, TRUE, src, BUSY_ICON_DANGER, ignore_turf_checks = TRUE))
@@ -59,7 +59,6 @@
 	
 	activator.record_tactical_unalive()
 
-	var/mob/living/carbon/human/activator = user
 	for(var/datum/limb/appendage AS in activator.limbs) //Oops we blew all our limbs off
 		if(istype(appendage, /datum/limb/chest) || istype(appendage, /datum/limb/groin) || istype(appendage, /datum/limb/head))
 			continue
@@ -128,8 +127,7 @@
 	desc = "Obviously someone just strapped a bomb to a marine harness and called it tactical. The light has been removed, and its switch used as the detonator.<br><span class='notice'>Control-Click to set a warcry.</span> <span class='warning'>This harness has no light, toggling it will detonate the vest! Riot shields prevent detonation of the tactical explosive vest!!</span>"
 
 /obj/item/clothing/suit/storage/marine/boomvest/standard/attack_self(mob/user)
-	. = ..()
-	if(.)
+	if(!check_and_cut(user))
 		return FALSE
 
 	var/turf/target = get_turf(loc)
