@@ -16,9 +16,13 @@
 
 	return INITIALIZE_HINT_LATELOAD
 
+/obj/structure/patrol_point/Destroy()
+	linked_point = null
+	return ..()
 
 /obj/structure/patrol_point/LateInitialize()
-	create_link()
+	if(!create_link())
+		Destroy()
 
 ///Links the patrol point to its associated exit point
 /obj/structure/patrol_point/proc/create_link()
@@ -26,7 +30,8 @@
 		if(exit_point.id == id)
 			linked_point = exit_point
 			RegisterSignal(linked_point, COMSIG_QDELETING, PROC_REF(delete_link))
-			return
+			return TRUE
+	return FALSE
 
 ///Removes the linked patrol exist point
 /obj/structure/patrol_point/proc/delete_link()

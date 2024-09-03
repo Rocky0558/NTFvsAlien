@@ -21,7 +21,7 @@
 	RegisterSignals(SSdcs, list(COMSIG_GLOB_GAMEMODE_LOADED, COMSIG_GLOB_CAMPAIGN_MISSION_LOADED), PROC_REF(finish_setup))
 
 ///Finishes setup after we know what gamemode it is
-/obj/effect/landmark/patrol_point/proc/finish_setup(datum/source, mode_override = FALSE)
+/obj/effect/landmark/patrol_point/proc/finish_setup(datum/source, mode_override = TRUE)	// Or we override it. Or we add MODE_TWO_HUMAN_FACTIONS to ext+ FLAGS
 	SIGNAL_HANDLER
 	UnregisterSignal(SSdcs, list(COMSIG_GLOB_GAMEMODE_LOADED, COMSIG_GLOB_CAMPAIGN_MISSION_LOADED))
 	if(!(SSticker?.mode?.round_type_flags & MODE_TWO_HUMAN_FACTIONS) && !mode_override)

@@ -4483,6 +4483,9 @@
 /area/antag_ship/clf_base/hallways/inside)
 "yv" = (
 /obj/effect/turf_decal/warning_stripes/thick,
+/obj/structure/patrol_point{
+	id = "TGMC_1"
+	},
 /turf/open/floor/mainship/sterile/plain,
 /area/antag_ship/pmc_ntf/aft/spaceport)
 "yw" = (
@@ -5650,6 +5653,7 @@
 /area/antag_ship/vsd/med)
 "Fh" = (
 /obj/item/storage/toolbox/mechanical,
+/obj/structure/patrol_point/som_21,
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/som/hangar)
 "Fi" = (
@@ -6481,6 +6485,7 @@
 /area/antag_ship/pmc_ntf/port/quarters)
 "JA" = (
 /obj/machinery/holopad,
+/obj/structure/patrol_point/som_11,
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/som/hangar)
 "JB" = (
@@ -7795,6 +7800,13 @@
 	dir = 4
 	},
 /area/antag_ship/som/mech_bay)
+"Qw" = (
+/obj/effect/turf_decal/warning_stripes/thick,
+/obj/structure/patrol_point{
+	id = "TGMC_2"
+	},
+/turf/open/floor/mainship/sterile/plain,
+/area/antag_ship/pmc_ntf/aft/spaceport)
 "Qx" = (
 /obj/structure/cable,
 /obj/effect/decal/cleanable/dirt,
@@ -10757,7 +10769,7 @@ GX
 kr
 VI
 Mk
-yv
+Qw
 Ve
 fv
 Ve
