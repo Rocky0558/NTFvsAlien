@@ -12936,7 +12936,7 @@
 /turf/open/floor/plating/asteroidwarning/down,
 /area/deltastation/commons/dorms/barracks{
 	name = "CLF Bunks";
-	outside = s
+	outside = 0
 	})
 "lBK" = (
 /obj/effect/spawner/random/misc/structure/broken_reinforced_window/colonyspawn,
