@@ -21664,7 +21664,7 @@
 /area/lv624/ground/jungle5)
 "usw" = (
 /turf/closed/wall/indestructible/bulkhead{
-	name = ""Youfuckedup" monument.";
+	name = "\"Youfuckedup\" monument.";
 	desc = "To make a mistake is human, to blame it on someone else is even more human."
 	},
 /area/mainship/patrol_base/som)
