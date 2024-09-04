@@ -3,7 +3,7 @@
 /obj/machinery/autodoc,
 /obj/effect/turf_decal/trimline/yellow,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "ac" = (
 /obj/machinery/telecomms/server/presets/command/som,
 /turf/open/floor/bcircuit/anim,
@@ -351,7 +351,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /obj/effect/turf_decal/trimline/yellow/mid_joiner,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "cD" = (
 /obj/machinery/door/airlock/external{
 	locked = 1
@@ -979,9 +979,12 @@
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/hangar/west)
 "gy" = (
-/obj/machinery/power/smes,
 /obj/effect/turf_decal/warning_stripes/box/empty,
 /obj/structure/cable,
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
+	},
 /turf/open/floor/mainship/sterile/plain,
 /area/antag_ship/pmc_ntf/aft/engiroom/starboard)
 "gz" = (
@@ -1367,6 +1370,10 @@
 /obj/structure/cable,
 /obj/structure/prop/mainship/gelida/powerconnector{
 	dir = 8
+	},
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
 	},
 /turf/open/floor/prison/plate,
 /area/antag_ship/vsd/engi)
@@ -2063,7 +2070,7 @@
 	},
 /obj/effect/turf_decal/trimline/yellow,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "lY" = (
 /obj/machinery/vending/uniform_supply/pmc,
 /obj/machinery/light/mainship{
@@ -2167,6 +2174,10 @@
 /obj/structure/cable,
 /turf/open/floor/mainship/office,
 /area/antag_ship/som/bridge)
+"my" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/aft/spaceport)
 "mz" = (
 /obj/structure/cable,
 /turf/open/floor/plating/ground/desertdam/asphalt/cement_sunbleached,
@@ -2762,9 +2773,8 @@
 /area/antag_ship/clf_base/hallways/inside)
 "ph" = (
 /obj/structure/cable,
-/obj/machinery/door/airlock/mainship/medical/glass{
-	dir = 2;
-	req_one_access = list(206)
+/obj/machinery/door/airlock/mainship/medical/free_access{
+	dir = 1
 	},
 /turf/open/floor/prison/sterilewhite/full,
 /area/antag_ship/pmc_ntf/starboard/medbay)
@@ -2983,7 +2993,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /obj/effect/turf_decal/trimline/yellow/mid_joiner,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "qe" = (
 /obj/structure/rack,
 /obj/item/armor_module/storage/uniform/black_vest,
@@ -3099,7 +3109,7 @@
 /obj/effect/turf_decal/trimline/yellow/mid_joiner,
 /obj/structure/cable,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "qM" = (
 /turf/closed/shuttle/dropship_regular/backwall,
 /area/shuttle/transport)
@@ -3380,6 +3390,10 @@
 "ss" = (
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/commcenter)
+"st" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/port/spaceport)
 "sw" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -3583,9 +3597,12 @@
 /turf/open/floor/prison/redfloor,
 /area/antag_ship/vsd/hall)
 "tK" = (
-/obj/machinery/power/smes,
 /obj/effect/turf_decal/warning_stripes/thick,
 /obj/structure/cable,
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
+	},
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/generator_room)
 "tN" = (
@@ -4041,7 +4058,7 @@
 	dir = 8
 	},
 /turf/open/floor/mainship/black/full,
-/area/antag_ship)
+/area/antag_ship/pmc_ntf/center/armory)
 "wk" = (
 /obj/structure/cable,
 /turf/open/floor/plating/plating_catwalk,
@@ -4238,6 +4255,10 @@
 /obj/machinery/vending/uniform_supply/vsd,
 /turf/open/floor/iron/dark/herringbone,
 /area/antag_ship/vsd/port)
+"xo" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/starboard/spaceport)
 "xq" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
@@ -4654,9 +4675,7 @@
 /area/antag_ship/clf_base/techroom)
 "zI" = (
 /obj/structure/cable,
-/obj/machinery/door/airlock/mainship/medical/glass{
-	name = "\improper VSD Medbay Airlock"
-	},
+/obj/machinery/door/airlock/mainship/medical/free_access,
 /turf/open/floor/grayscale/round/black,
 /area/antag_ship/vsd/med)
 "zJ" = (
@@ -4946,6 +4965,10 @@
 /obj/structure/prop/mainship/gelida/powerconnector{
 	dir = 8
 	},
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
+	},
 /turf/open/floor/prison/plate,
 /area/antag_ship/vsd/engi)
 "BB" = (
@@ -5198,11 +5221,14 @@
 /turf/open/floor/plating/asteroidwarning,
 /area/antag_ship/clf_base/sleeproom)
 "CE" = (
-/obj/machinery/power/smes,
 /obj/structure/cable,
 /obj/effect/turf_decal/warning_stripes/thick,
 /obj/machinery/light/mainship{
 	dir = 8
+	},
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
 	},
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/generator_room)
@@ -5606,7 +5632,7 @@
 "ES" = (
 /obj/structure/window/framed/mainship,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship)
+/area/antag_ship/icc/commcenter)
 "ET" = (
 /obj/machinery/light/mainship{
 	light_color = "#da2f1b"
@@ -6262,6 +6288,10 @@
 /obj/machinery/hydroponics,
 /turf/open/floor/grass,
 /area/antag_ship/som/security/cell)
+"Iy" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/sterile/plain,
+/area/antag_ship/pmc_ntf/aft/spaceport)
 "Iz" = (
 /obj/machinery/vending/MarineMed,
 /obj/machinery/light/mainship{
@@ -6681,6 +6711,10 @@
 /obj/item/bedsheet/medical,
 /turf/open/floor/plating/asteroidfloor,
 /area/antag_ship/clf_base/medbay)
+"KJ" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/port/quarters)
 "KL" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/mechanical,
@@ -6851,10 +6885,14 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/antag_ship/clf_base/hallways/inside)
+"LG" = (
+/obj/structure/door/mineral_door/wood,
+/turf/open/floor/plating/ground/desertdam/asphalt/tile,
+/area/antag_ship/clf_base/techroom)
 "LH" = (
-/obj/structure/window/framed/prison/reinforced/hull,
-/turf/open/floor/grayscale/round/black,
-/area/antag_ship)
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/fore/restroom)
 "LI" = (
 /turf/open/floor/iron/dark,
 /area/antag_ship/vsd/armory)
@@ -7393,6 +7431,11 @@
 /obj/structure/cable,
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/pmc_ntf/aft/engiroom/starboard)
+"OC" = (
+/turf/open/floor/plating/ground/desertdam/asphalt/threeside/regular{
+	dir = 8
+	},
+/area/antag_ship/clf_base/techroom)
 "OD" = (
 /obj/structure/largecrate/random,
 /obj/effect/turf_decal/trimline/brown/warning{
@@ -7431,6 +7474,10 @@
 /obj/structure/droppod,
 /turf/open/floor/plating/ground/dirt,
 /area/shuttle/transport)
+"OL" = (
+/obj/structure/window/framed/mainship/hull,
+/turf/open/floor/mainship/office,
+/area/antag_ship/pmc_ntf/fore/bridge)
 "OO" = (
 /obj/structure/cable,
 /turf/open/floor/mainship/black{
@@ -7803,7 +7850,8 @@
 "Qw" = (
 /obj/effect/turf_decal/warning_stripes/thick,
 /obj/structure/patrol_point{
-	id = "TGMC_2"
+	id = "TGMC_2";
+	icon_state = "patrol_point_2"
 	},
 /turf/open/floor/mainship/sterile/plain,
 /area/antag_ship/pmc_ntf/aft/spaceport)
@@ -7982,7 +8030,7 @@
 "Rs" = (
 /obj/structure/window/framed/mainship/gray,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship)
+/area/antag_ship/icc/warehouse)
 "Rv" = (
 /obj/structure/cable,
 /turf/open/floor/plating/plating_catwalk,
@@ -8767,7 +8815,7 @@
 /obj/effect/turf_decal/trimline/yellow/filled/warning,
 /obj/effect/turf_decal/trimline/yellow/mid_joiner,
 /turf/open/floor/plating/ground/concrete,
-/area/antag_ship/icc/warehouse)
+/area/antag_ship/icc/medical_room)
 "Vj" = (
 /obj/effect/landmark/start/job/vsd,
 /obj/effect/turf_decal/warning_stripes/thin{
@@ -8810,7 +8858,7 @@
 	dir = 4
 	},
 /turf/open/floor/mainship/black/full,
-/area/antag_ship)
+/area/antag_ship/pmc_ntf/center/armory)
 "Vn" = (
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/iron/grimy,
@@ -9222,9 +9270,12 @@
 /turf/open/floor/mainship/office,
 /area/antag_ship/som/bridge)
 "Xo" = (
-/obj/machinery/power/smes,
 /obj/effect/turf_decal/warning_stripes/box/empty,
 /obj/structure/cable,
+/obj/machinery/power/smes{
+	output_level = 200000;
+	input_level = 200000
+	},
 /turf/open/floor/mainship/sterile/plain,
 /area/antag_ship/pmc_ntf/aft/engiroom/port)
 "Xq" = (
@@ -9525,6 +9576,13 @@
 /obj/item/storage/box/crate/loot/materials_pack,
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/hangar/west)
+"YS" = (
+/obj/structure/patrol_point{
+	id = "TGMC_2";
+	icon_state = "patrol_point_2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/icc/hangar/west)
 "YT" = (
 /obj/machinery/bioprinter/stocked,
 /turf/open/floor/plating/ground/concrete,
@@ -9567,6 +9625,12 @@
 /obj/item/stack/sheet/plasteel/medium_stack,
 /turf/open/floor/plating/ground/dirt,
 /area/antag_ship/clf_base/hallways/outside)
+"Zc" = (
+/obj/structure/patrol_point{
+	id = "TGMC_1"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/icc/hangar/west)
 "Zf" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
@@ -9895,14 +9959,14 @@ CN
 CN
 Cc
 Cc
-xU
+KJ
 Cc
-xU
+KJ
 Cc
 Cc
 cD
 Cc
-xU
+st
 Cc
 Cc
 Vl
@@ -10487,7 +10551,7 @@ aL
 nK
 fv
 jX
-xU
+my
 VK
 VK
 CN
@@ -10564,19 +10628,19 @@ xU
 jz
 Qn
 yW
-xU
+OL
 oE
 SZ
 dz
 dB
-xU
+LH
 sk
 GX
 ob
 GX
 GX
 GX
-kr
+Iy
 nK
 Rv
 fw
@@ -10664,14 +10728,14 @@ Wm
 jO
 Ut
 Zz
-xU
+LH
 av
 GX
 GX
 rE
 Xz
 GX
-kr
+Iy
 VI
 mB
 yv
@@ -10759,14 +10823,14 @@ jO
 jO
 nf
 QJ
-xU
+LH
 qr
 GX
 dE
 GX
 iX
 GX
-kr
+Iy
 VI
 Mk
 Qw
@@ -10849,19 +10913,19 @@ xU
 zz
 nq
 xW
-xU
+OL
 Yd
 SZ
 dB
 dB
-xU
+LH
 bo
 GX
 ob
 GX
 GX
 GX
-kr
+Iy
 kU
 Rv
 JP
@@ -10962,7 +11026,7 @@ aL
 Kh
 fv
 jX
-xU
+my
 VK
 VK
 CN
@@ -11517,7 +11581,7 @@ Cc
 Cc
 xz
 Cc
-xU
+xo
 Cc
 Cc
 wi
@@ -13596,7 +13660,7 @@ VK
 "}
 (42,1,1) = {"
 VK
-LH
+ky
 Fc
 xj
 mh
@@ -13691,7 +13755,7 @@ VK
 "}
 (43,1,1) = {"
 VK
-LH
+ky
 eR
 pJ
 On
@@ -13786,7 +13850,7 @@ VK
 "}
 (44,1,1) = {"
 VK
-LH
+ky
 hZ
 pJ
 FG
@@ -13881,7 +13945,7 @@ VK
 "}
 (45,1,1) = {"
 KT
-LH
+ky
 xe
 wb
 as
@@ -13976,7 +14040,7 @@ VK
 "}
 (46,1,1) = {"
 VK
-LH
+ky
 qW
 pJ
 as
@@ -14071,7 +14135,7 @@ VK
 "}
 (47,1,1) = {"
 VK
-LH
+ky
 Ui
 pJ
 ug
@@ -14166,7 +14230,7 @@ VK
 "}
 (48,1,1) = {"
 VK
-LH
+ky
 XG
 tS
 pX
@@ -16546,7 +16610,7 @@ io
 VL
 cL
 rG
-JB
+Zc
 jb
 Py
 XP
@@ -16641,7 +16705,7 @@ io
 VL
 cp
 JB
-JB
+YS
 jb
 Py
 XP
@@ -17401,7 +17465,7 @@ io
 VL
 cL
 rG
-JB
+Zc
 jb
 Py
 XP
@@ -17496,7 +17560,7 @@ io
 VL
 cp
 JB
-JB
+YS
 jb
 Py
 XP
@@ -18330,8 +18394,8 @@ Aa
 Nj
 sS
 bg
-SB
-ke
+OC
+LG
 JW
 gW
 gW
