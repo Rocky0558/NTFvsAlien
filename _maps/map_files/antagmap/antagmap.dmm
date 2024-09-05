@@ -6,9 +6,13 @@
 /area/antag_ship/icc/medical_room)
 "ac" = (
 /obj/machinery/telecomms/server/presets/command/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "ad" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/layer1{
+	dir = 1;
+	on = 1
+	},
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/hangar)
 "af" = (
@@ -172,6 +176,7 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -343,7 +348,6 @@
 /turf/open/floor/mainship/mono,
 /area/antag_ship/icc/hangar/west)
 "cy" = (
-/obj/structure/cable,
 /obj/effect/spawner/random/engineering/cable,
 /turf/open/floor/plating/ground/desertdam/asphalt/cement_sunbleached,
 /area/antag_ship/clf_base/lounge)
@@ -403,7 +407,7 @@
 /area/antag_ship/pmc_ntf/center/armory)
 "cR" = (
 /obj/machinery/telecomms/processor/preset_four/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "cS" = (
 /obj/effect/decal/cleanable/blood/gibs/robot,
@@ -452,6 +456,10 @@
 	icon_state = "carpet-1"
 	},
 /area/antag_ship/som/bridge)
+"de" = (
+/obj/structure/cable,
+/turf/open/floor/mainship/mono,
+/area/antag_ship/som/maintenance/south)
 "df" = (
 /obj/machinery/bioprinter/stocked,
 /turf/open/floor/iron/dark/smooth_edge{
@@ -723,11 +731,6 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/antag_ship/som/office/commander)
-"eO" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/turf/open/floor/plating/plating_catwalk,
-/area/antag_ship/som/requisition)
 "eQ" = (
 /obj/item/weapon/butterfly/switchblade,
 /obj/item/weapon/butterfly/switchblade,
@@ -827,6 +830,13 @@
 "fr" = (
 /turf/open/floor/plating/ground/desertdam/asphalt/open,
 /area/antag_ship/icc/hangar/east)
+"fu" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/som/hangar)
 "fv" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/pmc_ntf/aft/spaceport)
@@ -963,7 +973,7 @@
 "gs" = (
 /obj/machinery/power/apc/mainship,
 /obj/structure/cable,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "gt" = (
 /obj/structure/prop/mainship/gelida/powercconnectorthreeside{
@@ -1094,6 +1104,13 @@
 	dir = 8
 	},
 /area/antag_ship/clf_base/techroom)
+"gZ" = (
+/obj/structure/cable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/antag_ship/som/maintenance/south)
 "ha" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/coffee{
@@ -1178,12 +1195,13 @@
 	dir = 2;
 	req_access = list(211)
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/security)
 "hz" = (
 /obj/effect/turf_decal/warning_stripes/thin{
 	dir = 5
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/layer1,
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/hangar)
 "hB" = (
@@ -1276,7 +1294,6 @@
 /obj/machinery/computer/sleep_console{
 	dir = 8
 	},
-/obj/structure/cable,
 /turf/open/floor/iron/dark,
 /area/antag_ship/vsd/med)
 "io" = (
@@ -1378,7 +1395,6 @@
 /turf/open/floor/prison/plate,
 /area/antag_ship/vsd/engi)
 "iG" = (
-/obj/structure/cable,
 /obj/structure/door/mineral_door/wood,
 /turf/open/floor/plating/asteroidwarning{
 	dir = 8
@@ -1426,10 +1442,16 @@
 /area/antag_ship/pmc_ntf/center/armory)
 "iU" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/barracs)
+"iV" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
+	dir = 1
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/som/requisition)
 "iX" = (
 /obj/machinery/vending/uniform_supply/pmc,
 /turf/open/floor/mainship/sterile/plain,
@@ -1488,7 +1510,7 @@
 /obj/machinery/door/airlock/mainship/command/cic{
 	req_access = list(204)
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/bridge)
 "je" = (
 /obj/structure/rack,
@@ -1514,7 +1536,7 @@
 	req_one_access = list(208);
 	dir = 2
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/maintenance/north)
 "jl" = (
 /obj/effect/landmark/weed_node,
@@ -1692,6 +1714,7 @@
 /area/antag_ship/icc/commcenter)
 "ki" = (
 /obj/machinery/computer/autodoc_console,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/small,
 /area/antag_ship/vsd/med)
 "kj" = (
@@ -1896,7 +1919,7 @@
 	dir = 10
 	},
 /obj/machinery/telecomms/broadcaster/preset_left/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "ll" = (
 /obj/machinery/light/mainship{
@@ -1961,7 +1984,7 @@
 	dir = 2
 	},
 /obj/structure/cable,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/engi)
 "lC" = (
 /obj/effect/turf_decal/warning_stripes/thin{
@@ -2487,7 +2510,7 @@
 /area/antag_ship/pmc_ntf/center/armory)
 "nE" = (
 /obj/machinery/telecomms/server/presets/medical/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "nF" = (
 /obj/effect/turf_decal/syndicateemblem/top/left,
@@ -2500,7 +2523,6 @@
 /turf/open/floor/prison/redfloor,
 /area/antag_ship/vsd/hall)
 "nG" = (
-/obj/structure/cable,
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
 /turf/open/floor/plating/ground/desertdam/asphalt/cement_sunbleached,
@@ -2623,7 +2645,7 @@
 /area/antag_ship/clf_base/hallways/inside)
 "ot" = (
 /obj/machinery/telecomms/processor/preset_two/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "ou" = (
 /obj/structure/drop_pod_launcher,
@@ -3110,6 +3132,13 @@
 /obj/structure/cable,
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/medical_room)
+"qL" = (
+/obj/structure/closet,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/turf/open/floor/mainship/mono,
+/area/antag_ship/som/preparation)
 "qM" = (
 /turf/closed/shuttle/dropship_regular/backwall,
 /area/shuttle/transport)
@@ -3379,7 +3408,7 @@
 /area/antag_ship/vsd/med)
 "sp" = (
 /obj/machinery/telecomms/processor/preset_one/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "sr" = (
 /obj/structure/bed/chair/sofa/left{
@@ -3515,6 +3544,10 @@
 	dir = 4
 	},
 /obj/effect/spawner/random/misc/trash,
+/obj/structure/closet,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/barracs)
 "tk" = (
@@ -3791,7 +3824,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/mainship/office,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/bridge)
 "uP" = (
 /obj/machinery/light/mainship{
@@ -3836,7 +3869,6 @@
 	dir = 1
 	},
 /obj/structure/cable,
-/obj/structure/cable,
 /turf/open/floor/mainship/sterile/plain,
 /area/antag_ship/pmc_ntf/port/spaceport)
 "vc" = (
@@ -3867,7 +3899,7 @@
 	dir = 2
 	},
 /obj/structure/cable,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/barracs)
 "vk" = (
 /obj/machinery/computer/mech_bay_power_console,
@@ -3914,9 +3946,7 @@
 	dir = 4
 	},
 /obj/structure/cable,
-/obj/machinery/power/apc{
-	dir = 1
-	},
+/obj/machinery/power/apc,
 /turf/open/floor/mainship/sterile/white,
 /area/antag_ship/som/bathroom)
 "vx" = (
@@ -4002,7 +4032,7 @@
 	req_one_access = list(208);
 	dir = 2
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/maintenance/south)
 "wa" = (
 /obj/structure/platform_decoration,
@@ -4139,7 +4169,7 @@
 /area/antag_ship/clf_base/techroom)
 "wG" = (
 /obj/structure/window/framed/mainship/gray/toughened,
-/turf/open/floor/plating,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/bridge)
 "wI" = (
 /obj/item/storage/box/visual/magazine/compact/pepperball/full,
@@ -4523,7 +4553,7 @@
 /area/antag_ship/icc/warehouse)
 "yA" = (
 /obj/machinery/telecomms/bus/preset_three/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "yB" = (
 /turf/open/floor/mainship/sterile/plain,
@@ -4540,7 +4570,7 @@
 /area/antag_ship/som/office/commander/field)
 "yH" = (
 /obj/machinery/telecomms/server/presets/engineering/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "yI" = (
 /turf/closed/mineral/smooth/desertdamrockwall/indestructible,
@@ -4615,7 +4645,7 @@
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/engi)
 "zq" = (
 /obj/structure/table/reinforced,
@@ -4675,7 +4705,9 @@
 /area/antag_ship/clf_base/techroom)
 "zI" = (
 /obj/structure/cable,
-/obj/machinery/door/airlock/mainship/medical/free_access,
+/obj/machinery/door/airlock/mainship/medical/free_access{
+	name = "\improper VSD Medbay Airlock"
+	},
 /turf/open/floor/grayscale/round/black,
 /area/antag_ship/vsd/med)
 "zJ" = (
@@ -5121,6 +5153,7 @@
 /obj/structure/sink{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/iron/dark/smooth_edge{
 	dir = 4
 	},
@@ -5132,7 +5165,7 @@
 /area/antag_ship/icc/hangar/center)
 "Cq" = (
 /obj/machinery/telecomms/bus/preset_four/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Cr" = (
 /obj/structure/table/wood/fancy,
@@ -5347,7 +5380,7 @@
 /area/antag_ship/som/bridge)
 "Dm" = (
 /obj/machinery/light,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Dn" = (
 /obj/effect/landmark/start/job/usl,
@@ -5366,7 +5399,7 @@
 /turf/closed/wall/mainship/outer/reinforced,
 /area/antag_ship/icc/hangar/east)
 "Dq" = (
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Dr" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark{
@@ -5512,6 +5545,7 @@
 	req_access = list(204)
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/som/telecomms)
 "Et" = (
@@ -5759,7 +5793,6 @@
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/warehouse)
 "FD" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -5852,6 +5885,13 @@
 /obj/structure/largecrate/guns/russian,
 /turf/open/floor/plating/asteroidfloor,
 /area/antag_ship/clf_base/armory)
+"Ge" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 9
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/som/requisition)
 "Gf" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -5929,7 +5969,7 @@
 /area/antag_ship/som/preparation)
 "GD" = (
 /obj/machinery/telecomms/bus/preset_one/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "GE" = (
 /obj/effect/turf_decal/trimline/brown/warning{
@@ -6063,6 +6103,7 @@
 /area/antag_ship/som/barracs)
 "Hn" = (
 /obj/machinery/autodoc,
+/obj/structure/cable,
 /turf/open/floor/iron/dark/small,
 /area/antag_ship/vsd/med)
 "Hr" = (
@@ -6592,6 +6633,14 @@
 	dir = 8
 	},
 /area/antag_ship/vsd/hall)
+"JV" = (
+/obj/effect/ai_node,
+/obj/machinery/atmospherics/components/unary/vent_pump/layer1{
+	dir = 1;
+	on = 1
+	},
+/turf/open/floor/mainship/mono,
+/area/antag_ship/som/requisition)
 "JW" = (
 /obj/effect/ai_node,
 /turf/open/floor/plating/ground/dirt,
@@ -6699,7 +6748,6 @@
 	name = "Armoury";
 	id = "clfarmoury"
 	},
-/obj/structure/cable,
 /turf/open/floor/plating/asteroidwarning{
 	dir = 1
 	},
@@ -6935,6 +6983,11 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/antag_ship/som/office/torture_chamber)
+"LS" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
+/turf/open/floor/plating/plating_catwalk,
+/area/antag_ship/som/hangar)
 "LT" = (
 /obj/machinery/computer,
 /turf/open/shuttle/dropship/floor,
@@ -7124,7 +7177,6 @@
 /area/antag_ship/som/bridge)
 "Ni" = (
 /obj/structure/cable,
-/obj/structure/cable,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating/plating_catwalk,
 /area/antag_ship/som/requisition)
@@ -7175,7 +7227,6 @@
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/warning_stripes/box,
-/obj/structure/cable,
 /turf/open/floor/mainship/office,
 /area/antag_ship/pmc_ntf/aft/engiroom/port)
 "Nq" = (
@@ -7261,7 +7312,7 @@
 /obj/machinery/computer/camera_advanced/overwatch/som/xray{
 	req_access = list(204)
 	},
-/turf/open/floor/mainship/office,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/bridge)
 "NM" = (
 /obj/machinery/sleeper{
@@ -7271,8 +7322,13 @@
 /area/antag_ship/som/medbay)
 "NN" = (
 /obj/machinery/telecomms/hub/preset/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
+"NO" = (
+/obj/effect/turf_decal/stripes/asteroid/box,
+/obj/machinery/floodlight/landing,
+/turf/open/floor/plating/ground/desertdam/asphalt/cement_sunbleached,
+/area/antag_ship/clf_base/lounge)
 "NP" = (
 /obj/machinery/vending/uniform_supply/vsd,
 /turf/open/floor/iron/dark/side{
@@ -7425,7 +7481,7 @@
 "Ox" = (
 /obj/machinery/light,
 /obj/machinery/telecomms/receiver/preset_right/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "OA" = (
 /obj/structure/cable,
@@ -7636,7 +7692,6 @@
 /area/antag_ship/pmc_ntf/center/armory)
 "Px" = (
 /obj/structure/largecrate/supply/generator,
-/obj/structure/cable,
 /obj/effect/turf_decal/stripes/asteroid/box,
 /turf/open/floor/plating/ground/desertdam/asphalt/cement_sunbleached,
 /area/antag_ship/clf_base/lounge)
@@ -8007,7 +8062,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/bridge)
 "Ro" = (
 /obj/structure/table/black,
@@ -8062,7 +8117,7 @@
 	req_one_access = list(208);
 	dir = 2
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/mech_bay)
 "RE" = (
 /obj/machinery/door/airlock/mainship/generic{
@@ -8186,6 +8241,11 @@
 /obj/effect/landmark/start/job/som/staff_officer,
 /turf/open/floor/mainship/office,
 /area/antag_ship/som/bridge)
+"Sf" = (
+/obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/turf/open/floor/bcircuit/off,
+/area/antag_ship/som/telecomms)
 "Sj" = (
 /obj/machinery/door/airlock/mainship/security/glass{
 	req_access = list(211)
@@ -8470,7 +8530,7 @@
 /area/antag_ship/icc/hangar/west)
 "Ts" = (
 /obj/machinery/telecomms/processor/preset_three/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Tt" = (
 /obj/machinery/vending/coffee,
@@ -8543,6 +8603,7 @@
 /area/antag_ship/som/preparation)
 "TQ" = (
 /obj/effect/ai_node,
+/obj/machinery/atmospherics/components/unary/vent_pump/layer1,
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/requisition)
 "TX" = (
@@ -9109,9 +9170,7 @@
 /area/antag_ship/som/bridge)
 "Wt" = (
 /obj/structure/cable,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /turf/open/floor/mainship/mono,
 /area/antag_ship/som/requisition)
 "Wx" = (
@@ -9384,7 +9443,7 @@
 /area/antag_ship/som/security/cell)
 "XZ" = (
 /obj/machinery/telecomms/server/presets/common/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Yc" = (
 /turf/closed/wall/mainship/outer/reinforced,
@@ -9432,6 +9491,10 @@
 	},
 /area/antag_ship/clf_base/hallways/inside)
 "Yi" = (
+/obj/structure/closet,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
+/obj/item/storage/toolbox/emergency,
 /turf/open/floor/mainship/black/corner{
 	dir = 8
 	},
@@ -9466,7 +9529,7 @@
 /area/antag_ship/clf_base/medbay)
 "Yn" = (
 /obj/machinery/telecomms/receiver/preset_left/som,
-/turf/open/floor/bcircuit/anim,
+/turf/open/floor/mainship/tcomms,
 /area/antag_ship/som/telecomms)
 "Yo" = (
 /obj/structure/cable,
@@ -9480,7 +9543,7 @@
 "Yr" = (
 /obj/structure/cable,
 /obj/machinery/power/apc,
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/maintenance/south)
 "Yu" = (
 /obj/machinery/light/small{
@@ -9505,7 +9568,6 @@
 /turf/open/floor/plating/asteroidfloor,
 /area/antag_ship/clf_base/armory)
 "Yz" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -9593,7 +9655,7 @@
 	req_access = list(206);
 	req_one_access = null
 	},
-/turf/open/floor/plating/plating_catwalk,
+/turf/open/floor/mainship/mono,
 /area/antag_ship/som/medbay/morgue)
 "YX" = (
 /obj/structure/prop/mainship/sensor_computer2,
@@ -9742,7 +9804,6 @@
 /turf/open/floor/plating/ground/concrete,
 /area/antag_ship/icc/hangar/center)
 "ZW" = (
-/obj/structure/cable,
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -10893,7 +10954,7 @@ mf
 Dl
 gE
 wT
-ls
+EL
 YM
 GJ
 Vn
@@ -11166,7 +11227,7 @@ yw
 yw
 yw
 hf
-rS
+fu
 ad
 nm
 RK
@@ -11178,7 +11239,7 @@ RK
 RK
 nm
 hz
-rS
+LS
 bb
 Cq
 yA
@@ -11560,7 +11621,7 @@ RH
 ZI
 rS
 El
-sd
+Sf
 sd
 lk
 Kn
@@ -12591,8 +12652,8 @@ Dk
 Dk
 Dk
 tq
-TJ
-TQ
+iV
+JV
 en
 en
 en
@@ -12691,14 +12752,14 @@ Ni
 pF
 aI
 zE
-eO
+Ni
 uY
-eO
+Ni
 qX
 wU
 FE
-eO
-qu
+Ni
+Ge
 qu
 vX
 BR
@@ -12988,7 +13049,7 @@ An
 BD
 Uc
 bb
-Ki
+gZ
 Dk
 CN
 VK
@@ -13368,7 +13429,7 @@ An
 BD
 Lk
 bb
-Ki
+gZ
 Dk
 CN
 VK
@@ -14128,7 +14189,7 @@ Jl
 wd
 Bn
 bb
-nl
+de
 Dk
 CN
 VK
@@ -14211,7 +14272,7 @@ bb
 bb
 bb
 bb
-bD
+qL
 zf
 bD
 bb
@@ -14344,7 +14405,7 @@ mg
 FS
 ep
 Fd
-pK
+dP
 pK
 dP
 dP
@@ -14439,7 +14500,7 @@ mg
 GK
 VN
 xV
-pK
+dP
 Hn
 wt
 dP
@@ -14534,7 +14595,7 @@ mg
 qy
 Wg
 Rb
-pK
+dP
 ki
 IL
 dP
@@ -14628,9 +14689,9 @@ tf
 mg
 Mf
 af
-pK
-in
 dP
+in
+pK
 dP
 dP
 ur
@@ -17917,7 +17978,7 @@ GN
 uj
 aF
 Nj
-Ns
+LG
 ke
 AN
 AN
@@ -18003,7 +18064,7 @@ aF
 Hc
 fZ
 YN
-mz
+lH
 Px
 aF
 Aa
@@ -18667,7 +18728,7 @@ tT
 aF
 lH
 lH
-mz
+lH
 Ml
 Aa
 uj
@@ -18856,8 +18917,8 @@ CN
 tT
 aF
 lH
-mz
-Hc
+lH
+NO
 Ml
 Aa
 GN

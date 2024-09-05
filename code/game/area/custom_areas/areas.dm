@@ -11,3 +11,5 @@
 #include "ntf_pmc_ship.dm"
 #include "som_ship.dm"
 #include "vsd_ship.dm"
+
+#include "ntf_mainship.dm"
