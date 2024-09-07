@@ -9,10 +9,11 @@
 /// PRIMARY - HALLWAYS ///
 /area/mainship/ntf/hallways
 	name = "NTF Ship Hallway"
+	icon_state = "bow"
+
 
 /area/mainship/ntf/hallways/central
 	name = "NTF Ship Central Hallway"
-	icon_state = "bow"
 
 /area/mainship/ntf/hallways/central/first_deck
 	name = "NTF Ship First Deck Central Hallway"
@@ -31,12 +32,14 @@
 /area/mainship/ntf/hallways/starboard/third_deck
 	name = "NTF Ship Third Deck Starboard Hallway"
 
+
 /area/mainship/ntf/hallways/port
 	name = "NTF Ship Port Hallway"
 	icon_state = "port"
 
 /area/mainship/ntf/hallways/port/third_deck
 	name = "NTF Ship Third Deck Port Hallway"
+
 
 /area/mainship/ntf/hallways/aft
 	name = "NTF Ship Aft Hallway"
@@ -45,6 +48,7 @@
 /area/mainship/ntf/hallways/aft/third_deck
 	name = "NTF Ship Third Deck Aft Hallway"
 
+
 /area/mainship/ntf/hallways/fore
 	name = "NTF Ship Fore Hallway"
 	icon_state = "fore"
@@ -52,17 +56,32 @@
 /area/mainship/ntf/hallways/fore/third_deck
 	name = "NTF Ship Third Deck Fore Hallway"
 
+
 /area/mainship/ntf/hallways/hangar
 	name = "NTF Ship Hangar"
+	icon_state = "hangar"
 
+/area/mainship/ntf/hallways/hangar/dropship
+	name = "NTF Ship DropShip Hangar"
+
+/area/mainship/ntf/hallways/hangar/dropship/big
+	name = "NTF Ship Main DropShip Hangar"
+
+/area/mainship/ntf/hallways/hangar/dropship/smol
+	name = "NTF Ship Tadpod Hangar"
+
+/area/mainship/ntf/hallways/elevator_shaft
+	name = "NTF Ship Elevator Shaft"
+	requires_power = FALSE
 
 /// PRIMARY - MAINTENANCE ///
 /area/mainship/ntf/maintenance
 	name = "NTF Ship Maintenance"
+	icon_state = "bow"
 
 /area/mainship/ntf/maintenance/aft
 	name = "NTF Ship Aft Maintenance"
-	icon_state = "aft"
+	icon_state = "port"
 
 /area/mainship/ntf/maintenance/aft/first_deck
 	name = "NTF Ship First Deck Aft Maintenance"
@@ -75,7 +94,7 @@
 
 /area/mainship/ntf/maintenance/fore
 	name = "NTF Ship Fore Maintenance"
-	icon_state = "fore"
+	icon_state = "starboard"
 
 /area/mainship/ntf/maintenance/fore/first_deck
 	name = "NTF Ship First Deck Fore Maintenance"
@@ -92,6 +111,7 @@
 /area/mainship/ntf/hull
 	name = "NTF Ship Hull"
 	icon_state = "lowerhull"
+	requires_power = FALSE
 
 /area/mainship/ntf/hull/first_deck
 	name = "NTF Ship First Deck Hull"
@@ -121,6 +141,19 @@
 	name = "NTF Ship Artificial Intelligence Core Room"
 	icon_state = "airoom"
 
+/area/mainship/ntf/command/sd
+	name = "NTF Ship Self-Destruction System Core Room"
+	icon_state = "selfdestruct"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
+
+/area/mainship/ntf/command/sd/nuke
+	name = "NTF Ship Nuclear Weapon Secure Storage"
+
+/area/mainship/ntf/command/ob
+	name = "NTF Ship Orbital Bombardment Weapon Launcher"
+	icon_state = "weaponroom"
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
+
 /area/mainship/ntf/command/office
 	name = "NTF Ship Office"
 
@@ -143,7 +176,8 @@
 	name = "NTF Ship Chief Corporate Security Office"
 
 /area/mainship/ntf/command/office/ceo
-	name = "NTF Ship Chief Executive Officer Office"
+	name = "NTF Ship Chief Executive Officer Office"	// Bitch's Office
+	minimap_color = MINIMAP_AREA_COMMAND_CAVE
 
 /area/mainship/ntf/command/office/ro
 	name = "NTF Ship Requisition Officer Office"
@@ -153,10 +187,10 @@
 
 /area/mainship/ntf/command/office/cl
 	name = "NTF Ship Corporate Liason Office"
+	icon_state = "corporatespace"
 
-/area/mainship/ntf/command/office/so
-	name = "NTF Ship Staff Officer Room"
-
+/area/mainship/ntf/command/office/doll
+	name = "NTF Ship Command Doll"
 
 
 /// SECURITY ///
@@ -172,8 +206,24 @@
 /area/mainship/ntf/sec/brig
 	name = "NTF Ship Corporation Security Brig"
 
-/area/mainship/ntf/sec/armoury
-	name = "NTF Ship Corporation Security Armoury"
+/area/mainship/ntf/sec/brig/second_deck
+	name = "NTF Ship Second Deck Corporation Security Brig"
+
+/area/mainship/ntf/sec/brig/third_deck
+	name = "NTF Ship Third Deck Corporation Security Brig"
+
+/area/mainship/ntf/sec/armory
+	name = "NTF Ship Corporation Security Armory"
+	icon_state = "weaponroom"
+
+/area/mainship/ntf/sec/evidence
+	name = "NTF Ship Corporation Security Evidence Storage"
+
+/area/mainship/ntf/sec/room
+	name = "NTF Ship Corporation Security Private Room"
+
+/area/mainship/ntf/sec/lockers
+	name = "NTF Ship Corporation Security Storage"
 
 /area/mainship/ntf/sec/preparation
 	name = "NTF Ship Corporation Security Preparation Room"
@@ -195,6 +245,7 @@
 
 /area/mainship/ntf/medical/chemistry_lab
 	name = "NTF Ship Chemistry Laboratory"
+	icon_state = "chemistry"
 
 /area/mainship/ntf/medical/morgue
 	name = "NTF Ship Morgue"
@@ -219,6 +270,7 @@
 
 /area/mainship/ntf/medical/research
 	name = "NTF Ship Research"
+	icon_state = "science"
 	minimap_color = MINIMAP_AREA_RESEARCH
 
 /area/mainship/ntf/medical/research/office
@@ -243,13 +295,34 @@
 
 /area/mainship/ntf/engineering/reactor_room
 	name = "NTF Ship Reactor Room"
-	icon_state = "core"
+	icon_state = "coreroom"
 
 /area/mainship/ntf/engineering/energy_storage
 	name = "NTF Ship SMES Storage"
 
 /area/mainship/ntf/engineering/atmos
 	name = "NTF Ship Atmospherical Center"
+
+/area/mainship/ntf/engineering/substation
+	name = "NTF Ship Power Substation"
+
+/area/mainship/ntf/engineering/substation/aft
+	name = "NTF Ship Power Substation Aft"
+
+/area/mainship/ntf/engineering/substation/aft/first_deck
+	name = "NTF Ship First Deck Power Substation Aft"
+
+/area/mainship/ntf/engineering/substation/aft/second_deck
+	name = "NTF Ship Second Deck Power Substation Aft"
+
+/area/mainship/ntf/engineering/substation/fore
+	name = "NTF Ship Power Substation Fore"
+
+/area/mainship/ntf/engineering/substation/fore/first_deck
+	name = "NTF Ship First Deck Power Substation Fore"
+
+/area/mainship/ntf/engineering/substation/fore/second_deck
+	name = "NTF Ship Second Deck Power Substation Fore"
 
 
 
@@ -267,20 +340,107 @@
 
 /// SERVICE & LIVING ///
 /area/mainship/ntf/living
+	name = "NTF Ship Living Room"
+	icon_state = "livingspace"
+	minimap_color = MINIMAP_AREA_LIVING
+
+/area/mainship/ntf/living/office
+	name = "NTF Ship Living Office"
+
+/area/mainship/ntf/living/office/so
+	name = "NTF Ship Staff Officer Room"
+
+/area/mainship/ntf/living/office/po
+	name = "NTF Ship Pilot Officer Room"
+
+/area/mainship/ntf/living/office/worker
+	name = "NTF Ship Worker Room"
+
+/area/mainship/ntf/living/office/st
+	name = "NTF Ship Ship Technican Room"
+
+/area/mainship/ntf/living/lounge
+	name = "NTF Ship Lounge"
+
+/area/mainship/ntf/living/lounge/command
+	name = "NTF Ship Command Lounge"
+
 
 /area/mainship/ntf/service
+	name = "NTF Ship Service Room"
+	icon_state = "gruntrnr"
+
+/area/mainship/ntf/service/washroom
+	name = "NTF Ship Washroom"
+
+/area/mainship/ntf/service/washroom/first_deck
+	name = "NTF Ship First Deck Washroom"
+
+/area/mainship/ntf/service/washroom/second_deck
+	name = "NTF Ship Second Deck Washroom"
+/area/mainship/ntf/service/washroom/third_deck
+	name = "NTF Ship Third Deck Washroom"
+
+/area/mainship/ntf/service/bar
+	name = "NTF Ship Bar"
+
+/area/mainship/ntf/service/bar/kitchen
+
+/area/mainship/ntf/service/bar/freezer
+
+/area/mainship/ntf/service/bar
+
+/area/mainship/ntf/service/pool
+	name = "NTF Ship Waterpool"
+
+/area/mainship/ntf/service/hypersleep
+	name = "NTF Ship Hypersleep Chambers Room"
+
+/area/mainship/ntf/service/hypersleep/aft
+	name = "NTF Ship Aft Hypersleep Chambers Room"
+
+/area/mainship/ntf/service/hypersleep/fore
+	name = "NTF Ship Fore Hypersleep Chambers Room"
 
 
 
 /// MARINES ///
 /area/mainship/ntf/marines
+	name = "NTF Ship Marines Room"
 
 /area/mainship/ntf/marines/corpsman
+	name = "NTF Ship Combat Corpsman Room"
 
 /area/mainship/ntf/marines/engineer
+	name = "NTF Ship Combat Engineer Room"
 
 /area/mainship/ntf/marines/specialist
+	name = "NTF Ship Specialist Room"
 
 /area/mainship/ntf/marines/smartgunner
+	name = "NTF Ship Smartgunner Room"
 
 /area/mainship/ntf/marines/leader
+	name = "NTF Ship Squad Leader Room"
+
+
+
+/// EMERGENCY ///
+/area/mainship/ntf/emergency
+	name = "NTF Ship Emergency Room"
+	icon_state = "party"
+
+/area/mainship/ntf/emergency/evacuation
+	name = "NTF Ship Evacuation Port"
+
+/area/mainship/ntf/emergency/evacuation/one
+	name = "NTF Ship Evacuation Port - One"
+
+/area/mainship/ntf/emergency/evacuation/two
+	name = "NTF Ship Evacuation Port - Two"
+
+/area/mainship/ntf/emergency/evacuation/three
+	name = "NTF Ship Evacuation Port - Three"
+
+/area/mainship/ntf/emergency/evacuation/four
+	name = "NTF Ship Evacuation Port - Four"
