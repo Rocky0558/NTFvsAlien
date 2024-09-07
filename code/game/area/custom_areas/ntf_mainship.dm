@@ -3,6 +3,8 @@
 // Port = South | Starboard = North //
 
 /area/mainship/ntf
+	name = "NTF Ship"
+	icon_state = "invi"
 
 
 
@@ -232,6 +234,18 @@
 	name = "NTF Ship Prison"
 	icon_state = "brigcells"
 
+/area/mainship/ntf/sec/checkpoint
+	name = "NTF Ship Corporation Security Checkpoint"
+
+/area/mainship/ntf/sec/checkpoint/first_deck
+	name = "NTF Ship First Deck Corporation Security Checkpoint"
+
+/area/mainship/ntf/sec/checkpoint/second_deck
+	name = "NTF Ship Second Deck Corporation Security Checkpoint"	// I think i should have made shortcuts for the decks... 2D, CORPSEC
+
+/area/mainship/ntf/sec/checkpoint/third_deck
+	name = "NTF Ship Third Deck Corporation Security Checkpoint"
+
 
 
 /// MEDICAL & RESEARCH ///
@@ -239,6 +253,8 @@
 	name = "NTF Ship Medical"
 	icon_state = "medical"
 	minimap_color = MINIMAP_AREA_MEDBAY
+
+/area/mainship/ntf/medical/additional
 
 /area/mainship/ntf/medical/preparation
 	name = "NTF Ship Preparation Room"
@@ -261,7 +277,7 @@
 	name = "NTF Ship Second Medical Operating Room"
 
 /area/mainship/ntf/medical/hallway
-	name = "NTF Ship Hallway"
+	name = "NTF Ship Medical Hallway"
 
 /area/mainship/ntf/medical/hallway/main
 /area/mainship/ntf/medical/hallway/first
@@ -315,6 +331,9 @@
 /area/mainship/ntf/engineering/substation/aft/second_deck
 	name = "NTF Ship Second Deck Power Substation Aft"
 
+/area/mainship/ntf/engineering/substation/aft/third_deck
+	name = "NTF Ship Third Deck Power Substation Aft"
+
 /area/mainship/ntf/engineering/substation/fore
 	name = "NTF Ship Power Substation Fore"
 
@@ -323,6 +342,9 @@
 
 /area/mainship/ntf/engineering/substation/fore/second_deck
 	name = "NTF Ship Second Deck Power Substation Fore"
+
+/area/mainship/ntf/engineering/substation/fore/third_deck
+	name = "NTF Ship Third Deck Power Substation Fore"
 
 
 
@@ -353,17 +375,51 @@
 /area/mainship/ntf/living/office/po
 	name = "NTF Ship Pilot Officer Room"
 
+/area/mainship/ntf/living/office/po/workplace
+	minimap_color = null
+
 /area/mainship/ntf/living/office/worker
 	name = "NTF Ship Worker Room"
 
 /area/mainship/ntf/living/office/st
 	name = "NTF Ship Ship Technican Room"
 
+/area/mainship/ntf/living/office/st/workplace
+	minimap_color = null
+
+/area/mainship/ntf/living/office/mp
+	name = "NTF Ship Mech Pilot"
+
+/area/mainship/ntf/living/office/mp/workplace
+	minimap_color = null
+
+/area/mainship/ntf/living/office/ac
+	name = "NTF Ship Assault Crew"
+
+/area/mainship/ntf/living/office/ac/workplace
+	minimap_color = null
+
+/area/mainship/ntf/living/office/synth
+	name = "NTF Ship Synthetic Room"
+
 /area/mainship/ntf/living/lounge
 	name = "NTF Ship Lounge"
 
 /area/mainship/ntf/living/lounge/command
 	name = "NTF Ship Command Lounge"
+
+/area/mainship/ntf/living/lounge/dormitories
+	name = "NTF Ship Dormitories"
+
+/area/mainship/ntf/living/lounge/dormitories/one
+/area/mainship/ntf/living/lounge/dormitories/two
+/area/mainship/ntf/living/lounge/dormitories/three
+/area/mainship/ntf/living/lounge/dormitories/four
+/area/mainship/ntf/living/lounge/dormitories/five
+/area/mainship/ntf/living/lounge/dormitories/six
+/area/mainship/ntf/living/lounge/dormitories/seven
+/area/mainship/ntf/living/lounge/dormitories/eight
+/area/mainship/ntf/living/lounge/dormitories/nine
 
 
 /area/mainship/ntf/service
@@ -376,19 +432,32 @@
 /area/mainship/ntf/service/washroom/first_deck
 	name = "NTF Ship First Deck Washroom"
 
+/area/mainship/ntf/service/washroom/first_deck/one
+/area/mainship/ntf/service/washroom/first_deck/two
+
 /area/mainship/ntf/service/washroom/second_deck
 	name = "NTF Ship Second Deck Washroom"
+
+/area/mainship/ntf/service/washroom/second_deck/one
+/area/mainship/ntf/service/washroom/second_deck/two
+
 /area/mainship/ntf/service/washroom/third_deck
 	name = "NTF Ship Third Deck Washroom"
+
+/area/mainship/ntf/service/washroom/third_deck/one
+/area/mainship/ntf/service/washroom/third_deck/two
 
 /area/mainship/ntf/service/bar
 	name = "NTF Ship Bar"
 
-/area/mainship/ntf/service/bar/kitchen
+/area/mainship/ntf/service/kitchen
+	name = "NTF Ship Kitchen"
 
-/area/mainship/ntf/service/bar/freezer
+/area/mainship/ntf/service/freezer
+	name = "NTF Ship Freezer"
 
-/area/mainship/ntf/service/bar
+/area/mainship/ntf/service/memorial
+	name = "NTF Ship Memorial"
 
 /area/mainship/ntf/service/pool
 	name = "NTF Ship Waterpool"
@@ -401,6 +470,15 @@
 
 /area/mainship/ntf/service/hypersleep/fore
 	name = "NTF Ship Fore Hypersleep Chambers Room"
+
+/area/mainship/ntf/service/droppods
+	name = "NTF Ship Droppods Room"
+
+/area/mainship/ntf/service/supply
+	name = "NTF Ship Supplies Room"
+
+/area/mainship/ntf/service/chapel
+	name = "NTF Ship Chapel"	// https://youtu.be/sCAdVQNaDTE?si=yeFPgQZE7kJp7Uno
 
 
 
@@ -444,3 +522,6 @@
 
 /area/mainship/ntf/emergency/evacuation/four
 	name = "NTF Ship Evacuation Port - Four"
+
+/area/mainship/ntf/emergency/evacuation/five
+	name = "NTF Ship Evacuation Port - Five"
