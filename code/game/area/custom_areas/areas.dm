@@ -13,3 +13,4 @@
 #include "vsd_ship.dm"
 
 #include "ntf_mainship.dm"
+#include "ntf_hqbase.dm"
